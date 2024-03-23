@@ -30,6 +30,9 @@
 
 \usepackage{ruby} %日本語ルビ。xelatex も OK!
 
+\usepackage{hyperref}
+
+
 \title{オンライン沖縄語辞典}
 \author{中村 仁宣 (Hisanobu Nakamura)}
 \begin{document}
@@ -39,8 +42,8 @@
 
 \section{自己紹介}
 
-\begin{frame}{初めてぃうがなびら！}
-  はいさい、ぐすーよー、\ruby{初}{はじ}めてぃうがなびら！わんねー...
+\begin{frame}{初めてぃうがなびら。}
+  わんねー...
     \begin{itemize}
     \item \ruby{名前}{のーじ}や\textbf{\ruby{中村仁宣}{なかむら ひさのぶ}}んでぃ\ruby{言}{い}ちょーいびーん。
     \item \ruby{出身}{すだち}や\textbf{愛知県名古屋市}やいびーん。イギリスんかいん\ruby{暮}{く}らちょーたる\ruby{事}{くとぅ}んあいびーん。
@@ -124,7 +127,7 @@
 \end{frame}
 
 \begin{frame}{オンライン沖縄語辞典開発の経緯}
-  \begin{block}{価値}
+  \begin{block}{それぞれの辞書の特徴}
     \begin{itemize}
     \item 『沖縄語辞典』
       \begin{itemize}
@@ -147,13 +150,13 @@
     \item このような語彙数・例文などが豊富なオンライン辞典があればいいのになと思う。
     \item NINJAL で『沖縄語辞典』の \textbf{Excel データがダウンロード可能}だと知る。
     \item ないのなら、『沖縄語辞典』のデータを\textbf{オンライン上で簡単に検索できるようにすれば良い！}
-    \item どうせ作るのなら、\textbf{他の人にも使って貰いたい}。      
+    \item 作るのなら、\textbf{他の人にも使って貰わないと勿体ない}。      
     \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}{オンライン沖縄語辞典開発の経緯}
-  \begin{block}{開発の開始}
+  \begin{block}{開発を開始}
     \begin{itemize}
     \item しかし、Excel のデータをそのまま使ったのでは、一般ユーザーにとっては使いにくい所もある...
     \end{itemize}
@@ -176,12 +179,9 @@
       \begin{itemize}
       \item 沖縄語は音素記号のみの表記。
       \end{itemize}
-    \item 「解説篇」を読まないと\textbf{動詞活用がわからない}
-      \begin{itemize}
-      \item 動詞の活用は自分で考える必要がある。
-      \end{itemize}
+    \item 付録の「解説篇」を読まないと\textbf{動詞活用がわからない}
     \item \textbf{初見では解読困難な知識が必要}。
-    \item 語彙の説明文の空白が圧縮されていて\textbf{読みづらい}
+    \item 語彙の説明文の空白が圧縮されていて\textbf{読みづらい}事も
     \end{enumerate}
   \end{block}
 \end{frame}
@@ -189,14 +189,16 @@
 \begin{frame}{オンライン沖縄語辞典開発の経緯}
   \begin{block}{電子情報の利点を活かす}
     \vspace{0pt}
-    『沖縄語辞典』は、元々紙の辞書として作成され、紙面の節約の必要性があるため、重複を省き、変化部分のみを記す経済的な表記法にならざるをえないが、電子空間上ではその制限は緩くなり、わかり易さのための冗長性を(許容範囲内で)持たせられる。テキスト処理とWeb技術でそれが可能。
+    しかし、これは、『沖縄語辞典』は元々紙の辞書として作成されたので、仕方のない事だったのではないかと思われる。
+    紙の辞書は紙面の節約の必要性があるため、重複を省いて、変化部分のみを記す経済的な表記法にならざるをえないが、
+    一方、電子空間上ではその制限は緩くなり、わかり易さのための冗長性を 、許容範囲内で 持たせる事ができる。テキスト処理と Web 技術でそれが可能となる。
   \end{block}
 \end{frame}
 
 \begin{frame}{オンライン沖縄語辞典開発の経緯}
   \begin{block}{『沖縄語辞典』をより多くの人へ}
     \vspace{0pt}
-    そこで、以下の点を情報技術により克服することで、より多くの人にとって使いやすいオンライン沖縄語辞典を作る事を目標とした。
+    そこで、以下の点を情報技術により克服することで、より多くの人にとって使いやすい（アクセッシブルな, accessible）オンライン沖縄語辞典を作る事を目標とした。
     \begin{enumerate}
     \item 音素記号をカナとIPAで表示する。
     \item 語彙説明の中の沖縄語もカナ表示する。
@@ -220,7 +222,7 @@
   \begin{block}{概要}
     \begin{itemize}
     \item  収録辞書：『沖縄語辞典』（沖日、日沖）、『うちなーぐち活用辞典』
-    \item  URL：https://okinawago.app/
+    \item  URL：\href{https://okinawago.app/}{https://okinawago.app/}
     \item 使用料：なし
     \end{itemize}
     \begin{figure}[ht]
@@ -261,7 +263,7 @@
 
 \begin{frame}{オンライン沖縄語辞典}
   % 比較の画像
-  \begin{block}{動詞「アーキユン」での全体文章表示比較}
+  \begin{block}{全体文章表示比較}
     \begin{figure}[ht]
       \centering
       \begin{minipage}{0.5\textwidth}
@@ -292,7 +294,7 @@
   \begin{block}{発音テーブルの例}
     \begin{figure}[ht]
       \centering
-        \includegraphics[height=0.6\paperheight,width=0.9\paperwidth]{okinawago-app-pronunciation-example2.png}
+        \includegraphics[height=0.6\paperheight,width=0.6\paperwidth]{okinawago-app-pronunciation-example.png}
     \end{figure}
   \end{block}
 \end{frame}
@@ -302,8 +304,36 @@
   \begin{block}{カナ表記について}
     \vspace{0pt}
     開発者が今まで見かけた中で、取り入れやすい表記法をできるだけ多くのバリエーションで検索できるように努力した。
-    「どれか一つでしか検索できない」ではなく、「どの表記法でも検索できる」を目指したかった。
+    「どれか一つでしか検索できない」ではなく、なるべく「どの表記法でも検索できる」を目指したかった。
     特に、グロッタルストップの有無をどう表記するかについては、現在様々な表記法が使われているので、よく使われているであろう書籍のものを取り入れた。
+  \end{block}
+\end{frame}
+
+\begin{frame}{オンライン沖縄語辞典}
+  % カナ表示について
+  \begin{block}{発音テーブルの例(声門閉鎖音の有無)}
+    \begin{figure}[ht]
+      \centering
+        \includegraphics[height=0.5\paperheight,width=0.8\paperwidth]{okinawago-app-pronunciation-example2.png}
+    \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}{オンライン沖縄語辞典}
+  \begin{block}{かな表記の解説ページ}
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[height=0.6\paperheight,width=0.7\paperwidth]{okinawago-app-about-pronunciation1.png}
+    \end{figure}
+  \end{block}
+\end{frame}
+
+\begin{frame}{オンライン沖縄語辞典}
+  \begin{block}{音素・カナ・IPA対応表}
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[height=0.6\paperheight,width=0.7\paperwidth]{okinawago-app-about-pronunciation2.png}
+    \end{figure}
   \end{block}
 \end{frame}
 
@@ -312,10 +342,10 @@
   \begin{block}{カナ表記で参考にした書籍、文献}
     \vspace{0pt}
     \begin{itemize}
-    \item 白水社『沖縄語の入門』
-    \item 研究社『初級 沖縄語』
-    \item 研究社『沖縄語辞典』
-    \item 沖縄県の『沖縄県における「しまくとぅば」の表記について』
+    \item 白水社『沖縄語の入門』西岡 敏、仲原 穣 著
+    \item 研究社『初級 沖縄語』花薗 悟 著
+    \item 研究社『沖縄語辞典』 内間 直仁、 野原 三義 編著
+    \item 沖縄県『沖縄県における「しまくとぅば」の表記について』
     \item しまくとぅば普及協議会の教材
     \end{itemize}
   \end{block}
@@ -345,10 +375,11 @@
 \end{frame}
 
 \begin{frame}{オンライン沖縄語辞典}
-  \begin{block}{分離の難しさ}
+  \begin{block}{分離の処理の難しさ}
     \begin{itemize}
     \item 「ほとんど」の例文を分離できているが、一部できていない箇所もあるかもしれない。
     \item 正規表現による処理を行っているため、正確な処理は対象データに対する網羅的な知識が必要。
+    \item エラーを見つけた場合はご報告を。
     \end{itemize}
   \end{block}
 \end{frame}
@@ -369,14 +400,14 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{オンライン沖縄語辞典}
-  \begin{block}{動詞活用表の生成について}
-    \begin{itemize}
-    \item 元の『沖縄語辞典』では品詞の部分に否定形とティ形語幹末尾のみの記載だった。
-    \item 不規則動詞の活用辞書を手で作成。規則動詞は自動生成。
-    \end{itemize}
-  \end{block}
-\end{frame}
+% \begin{frame}{オンライン沖縄語辞典}
+%   \begin{block}{動詞活用表の生成について}
+%     \begin{itemize}
+%     \item 元の『沖縄語辞典』では品詞の部分に否定形とティ形語幹末尾のみの記載だった。
+%     \item 不規則動詞の活用辞書を手で作成。規則動詞は自動生成。
+%     \end{itemize}
+%   \end{block}
+% \end{frame}
 
 %---------  うちなーぐち活用辞典 ----------% 
 % \begin{frame}{オンライン沖縄語辞典}
@@ -395,9 +426,38 @@
 % \end{frame}
 
 \begin{frame}{オンライン沖縄語辞典}
-  \begin{block}{うちなーぐち活用辞典に関する課題}
-    \vspace{0pt}    
-    PDF から抽出した構造化されていないデータしか手元になかったため、文字のフォント・色・位置・大きさなどの情報から手動で構造化を行った。そのため、まだ正しく構造化できていない箇所がある。
+  \begin{block}{うちなーぐち活用辞典}
+    \begin{figure}[ht]
+      \centering
+      \begin{minipage}{\paperwidth}
+        \includegraphics[height=0.6\paperheight,width=0.7\paperwidth]{okinawago-app-katsuyou-jiten.png}
+        %\caption{士族発音}
+      \end{minipage}
+    \end{figure}
+  \end{block}
+\end{frame}
+
+% \begin{frame}{オンライン沖縄語辞典}
+%   \begin{block}{うちなーぐち活用辞典に関する課題}
+%     \vspace{0pt}    
+%     PDF から抽出した構造化されていないデータしか手元になかったため、文字のフォント・色・位置・大きさなどの情報から手動で構造化を行った。そのため、まだ正しく構造化できていない箇所がある。改善の予定あり。
+%   \end{block}
+% \end{frame}
+
+
+\begin{frame}{オンライン沖縄語辞典}
+  \begin{block}{「この辞書について」のページ}
+    \begin{figure}[ht]
+      \centering
+      \begin{minipage}{0.4\paperwidth}
+        \includegraphics[height=0.4\paperheight]{okinawago-app-about.png}
+        %\caption{PDF}
+      \end{minipage}%
+      \begin{minipage}{0.4\textwidth}
+        \includegraphics[height=0.4\paperheight]{okinawago-app-twitter-account.png}
+        %\caption{オンライン沖縄語辞典}
+      \end{minipage}
+    \end{figure}
   \end{block}
 \end{frame}
 
@@ -453,7 +513,7 @@
       \end{itemize}
     \item 入手しやすさ(reachability)
       \begin{itemize}
-      \item 普通の人が普通の手段・コストで手に入れられる事。
+      \item なるべく多くの人が常識的な手段・コストで手に入れられる事。
       \end{itemize}
     \item 使いやすさ(usability)
       \begin{itemize}
@@ -463,12 +523,13 @@
     \end{itemize}
   \end{block}
 \end{frame}
+
 \begin{frame}{開発から得た知見}
-  \begin{block}{XXにとって利用しやすいデータとは}
+  \begin{block}{誰にとって利用しやすいデータか}
     \begin{itemize}
     \item 一般ユーザーにとって
       \begin{itemize}
-      \item インターネットなら、検索にヒットしやすい、雑多な劣化した情報に埋もれていない。        
+      \item インターネットなら、検索にヒットしやすい、雑多な情報に埋もれていない。        
       \item 紙の書籍なら、街の本屋で購入可能である、図書館にある、高くない等
       \item 利用料が相応、または無料。
       \item スマホ・PC上で、カナで検索できる等
@@ -490,7 +551,7 @@
     \item 学習サポート機能（動詞活用練習、語彙暗記テスト等）
     \item 他辞書の取り込み(さらなる沖縄語、琉球諸語の辞書の追加)
     \item Wiki 作成
-    \item 共同開発者・資金調達
+    \item 共同開発者・支援
     \end{itemize}
   \end{block}
 \end{frame}
@@ -500,7 +561,23 @@
   \LARGE{\ruby{終}{う}わいまでぃ\ruby{聞}{ち}ち\ruby{呉}{くぃ}みそーち\\いっぺー\ruby{御拝}{にふぇー}でーびる。}
   \end{center}
 \end{frame}
+
+\begin{frame}{オンライン沖縄語辞典}
+  % カナ表示について
+  \begin{block}{参考文献}
+    \vspace{0pt}
+    \begin{itemize}
+    \item 白水社『沖縄語の入門』西岡 敏、仲原 穣 著
+    \item 研究社『初級 沖縄語』花薗 悟 著
+    \item 研究社『沖縄語辞典』 内間 直仁、 野原 三義 編著
+    \item 沖縄県 \href{https://www.pref.okinawa.lg.jp/bunkakoryu/bunkageijutsu/1022484/1009625.html}{『沖縄県における「しまくとぅば」の表記について』}
+    \item しまくとぅば普及協議会の教材：\href{https://shimakutuba.jp/learn/document/}{学習ツールダウンロードのページ}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 \end{document}
+
 
 % \begin{frame}{オンライン沖縄語辞典}
 %   \begin{block}{バックエンド}
